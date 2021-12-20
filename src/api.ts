@@ -51,7 +51,7 @@ export class TMApi {
             },
         };
 
-        this.http = this.configureAxios(axios);
+        this.http = this.configureAxios(axios.create());
         this.socket = this.config.socket && new TMSocket(this.config.socket);
     }
 
