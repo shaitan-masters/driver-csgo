@@ -22,7 +22,7 @@ class TMApi {
                 },
             },
         };
-        this.http = this.configureAxios(axios_1.default);
+        this.http = this.configureAxios(axios_1.default.create());
         this.socket = this.config.socket && new socket_1.TMSocket(this.config.socket);
     }
     configureAxios(axios) {
